@@ -1,0 +1,320 @@
+@font-face {
+  font-family: 'Cirth Erebor';
+  src: url('./fonts/Erebor.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Cirth Erebor 1';
+  src: url('./fonts/Erebor1.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Cirth Erebor 2';
+  src: url('./fonts/Erebor2.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Cirth Erebor Caps';
+  src: url('./fonts/Erebcap.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Cirth Erebor Caps 1';
+  src: url('./fonts/Erebcap1.ttf') format('truetype');
+  font-weight: normal;
+}
+@font-face {
+  font-family: 'Cirth Erebor Caps 2';
+  src: url('./fonts/Erebcap2.ttf') format('truetype');
+  font-weight: normal;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0d0f12;
+  color: #d4c5a0;
+  font-family: 'Segoe UI', system-ui, -apple-system, sans-serif;
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 2rem 1.5rem 4rem;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid #2a2520;
+}
+
+.title {
+  font-size: 1.8rem;
+  color: #c9a84c;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  font-weight: 300;
+}
+
+.subtitle {
+  font-size: 0.85rem;
+  color: #7a6f5a;
+  margin-top: 0.3rem;
+  letter-spacing: 0.05em;
+}
+
+h2 {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #7a6f5a;
+  font-weight: 500;
+}
+
+/* Controls */
+.controls {
+  margin-bottom: 2rem;
+}
+
+.input-group {
+  margin-bottom: 1rem;
+}
+
+.input-group label {
+  display: block;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #7a6f5a;
+  margin-bottom: 0.4rem;
+}
+
+textarea {
+  width: 100%;
+  background: #151820;
+  border: 1px solid #2a2520;
+  border-radius: 6px;
+  color: #d4c5a0;
+  font-family: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
+  font-size: 1.05rem;
+  padding: 0.8rem 1rem;
+  resize: vertical;
+  transition: border-color 0.2s;
+}
+
+textarea:focus {
+  outline: none;
+  border-color: #c9a84c;
+}
+
+.options-row {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.option {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+}
+
+.option label {
+  color: #7a6f5a;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+select {
+  background: #151820;
+  border: 1px solid #2a2520;
+  border-radius: 4px;
+  color: #d4c5a0;
+  padding: 0.3rem 0.5rem;
+  font-size: 0.85rem;
+}
+
+select:focus {
+  outline: none;
+  border-color: #c9a84c;
+}
+
+input[type="range"] {
+  accent-color: #c9a84c;
+  width: 100px;
+}
+
+input[type="checkbox"] {
+  accent-color: #c9a84c;
+}
+
+#size-value {
+  font-size: 0.75rem;
+  color: #7a6f5a;
+  min-width: 36px;
+}
+
+/* Output */
+.output-panel {
+  background: #111419;
+  border: 1px solid #2a2520;
+  border-radius: 8px;
+  padding: 1.2rem 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.output-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.export-buttons button {
+  background: transparent;
+  border: 1px solid #3a3228;
+  border-radius: 4px;
+  color: #c9a84c;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding: 0.3rem 0.7rem;
+  cursor: pointer;
+  transition: background 0.2s, border-color 0.2s;
+}
+
+.export-buttons button:hover {
+  background: #1e1a14;
+  border-color: #c9a84c;
+}
+
+.cirth-display {
+  font-family: 'Cirth Erebor 2', serif;
+  font-size: 48px;
+  line-height: 1.5;
+  color: #e8dcc0;
+  word-break: break-word;
+  min-height: 60px;
+  padding: 0.5rem 0;
+  letter-spacing: 0.04em;
+}
+
+.cirth-sep {
+  color: #5a4f3a;
+  opacity: 0.7;
+}
+
+.cirth-punct {
+  color: #c9a84c;
+}
+
+/* Analysis table */
+.analysis-panel {
+  margin-bottom: 2rem;
+}
+
+.analysis-panel h2 {
+  margin-bottom: 0.8rem;
+}
+
+#analysis-table {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.word-group {
+  background: #111419;
+  border: 1px solid #2a2520;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  min-width: 70px;
+}
+
+.word-group .oe-word {
+  font-family: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
+  font-size: 0.85rem;
+  color: #9a8b6e;
+  text-align: center;
+}
+
+.word-group .cirth-word {
+  font-family: 'Cirth Erebor 2', serif;
+  font-size: 1.6rem;
+  color: #e8dcc0;
+  text-align: center;
+  letter-spacing: 0.02em;
+}
+
+.word-group .phonetic {
+  font-size: 0.7rem;
+  color: #5a5040;
+  text-align: center;
+  font-family: monospace;
+  line-height: 1.4;
+}
+
+.seg-item b {
+  color: #8a7a5a;
+}
+
+.seg-dot {
+  color: #3a3228;
+  margin: 0 1px;
+}
+
+/* Notes */
+.notes-panel {
+  border-top: 1px solid #2a2520;
+  padding-top: 1.2rem;
+}
+
+.notes-panel h2 {
+  margin-bottom: 0.6rem;
+}
+
+.notes-panel ul {
+  list-style: none;
+  font-size: 0.8rem;
+  color: #7a6f5a;
+}
+
+.notes-panel li {
+  padding: 0.2rem 0;
+  padding-left: 1rem;
+  position: relative;
+}
+
+.notes-panel li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: #c9a84c;
+}
+
+.notes-panel code {
+  background: #1a1610;
+  padding: 0.1rem 0.35rem;
+  border-radius: 3px;
+  font-size: 0.78rem;
+  color: #c9a84c;
+}

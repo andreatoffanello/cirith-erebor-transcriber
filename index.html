@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cirth Erebor Transcriber</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1 class="title">Cirth Erebor</h1>
+      <p class="subtitle">Old English → Angerthas Transcriber</p>
+    </header>
+
+    <div class="controls">
+      <div class="input-group">
+        <label for="input-text">Old English (Rohirric)</label>
+        <textarea id="input-text" rows="3" spellcheck="false" placeholder="Hwær cwom mearg?">Hwær cwom mearg? Hwær cwom mago? Hwær cwom maþþumgifa? Hwær cwom symbla gesetu? Hwær sindon seledreamas?</textarea>
+      </div>
+
+      <div class="options-row">
+        <div class="option">
+          <label for="font-select">Font variant</label>
+          <select id="font-select">
+            <option value="erebor">Erebor</option>
+            <option value="erebor1">Erebor 1</option>
+            <option value="erebor2" selected>Erebor 2</option>
+          </select>
+        </div>
+        <div class="option">
+          <label for="size-range">Size</label>
+          <input type="range" id="size-range" min="24" max="120" value="48">
+          <span id="size-value">48px</span>
+        </div>
+        <div class="option">
+          <label for="caps-toggle">
+            <input type="checkbox" id="caps-toggle"> Use Caps font (decorative)
+          </label>
+        </div>
+        <div class="option">
+          <label for="sep-toggle">
+            <input type="checkbox" id="sep-toggle" checked> Cirth word separators (·)
+          </label>
+        </div>
+      </div>
+    </div>
+
+    <div class="output-panel">
+      <div class="output-header">
+        <h2>Cirth Runes</h2>
+        <div class="export-buttons">
+          <button id="btn-export-svg" title="Export as SVG">SVG</button>
+          <button id="btn-export-png" title="Export as PNG">PNG</button>
+        </div>
+      </div>
+      <div id="cirth-output" class="cirth-display"></div>
+    </div>
+
+    <div class="analysis-panel">
+      <h2>Transcription Breakdown</h2>
+      <div id="analysis-table"></div>
+    </div>
+
+    <div class="notes-panel">
+      <h2>Transcription Notes</h2>
+      <ul>
+        <li><strong>æ</strong> (ash) → certh 48 (a) + certh 46 (e), written as digraph</li>
+        <li><strong>hw</strong> → certh 5 (dedicated /hw/ rune)</li>
+        <li><strong>cw</strong> → certh 23 (dedicated /kw/ rune)</li>
+        <li><strong>þ/ð</strong> (thorn/eth) → certh 10 (voiceless th) / certh 11 (voiced dh)</li>
+        <li><strong>ge-</strong> prefix → certh 14 (/j/) + vowel (palatalized in OE)</li>
+        <li><strong>sc</strong> → certh 15 (/ʃ/, as in OE "scip" = ship)</li>
+        <li>Word separator: certh space dot (<code>\</code> in font)</li>
+        <li>Sentence punctuation: three dots (<code>P</code> in font)</li>
+        <li>Mode: Angerthas Daeron values (baseline for OE/Rohirric transcription)</li>
+      </ul>
+    </div>
+  </div>
+
+  <script type="module" src="main.js"></script>
+</body>
+</html>

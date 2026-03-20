@@ -63,19 +63,35 @@
     </div>
 
     <div class="notes-panel">
-      <h2>Transcription Notes</h2>
+      <h2>Phonological Rules Applied</h2>
       <ul>
-        <li><strong>æ</strong> (ash) → certh 48 (a) + certh 46 (e), written as digraph</li>
-        <li><strong>hw</strong> → certh 5 (dedicated /hw/ rune)</li>
-        <li><strong>cw</strong> → certh 23 (dedicated /kw/ rune)</li>
-        <li><strong>þ/ð</strong> (thorn/eth) → certh 10 (voiceless th) / certh 11 (voiced dh)</li>
-        <li><strong>ge-</strong> prefix → certh 14 (/j/) + vowel (palatalized in OE)</li>
-        <li><strong>sc</strong> → certh 15 (/ʃ/, as in OE "scip" = ship)</li>
-        <li>Word separator: certh space dot (<code>\</code> in font)</li>
-        <li>Sentence punctuation: three dots (<code>P</code> in font)</li>
-        <li>Mode: Angerthas Daeron values (baseline for OE/Rohirric transcription)</li>
+        <li><strong>c</strong> before front vowels (e, i, æ, y) → /tʃ/ certh 15 (palatal); before back vowels → /k/ certh 18</li>
+        <li><strong>g</strong> initial + front vowel → /j/ certh 14 (palatal); post-back-vowel → /ɣ/ certh 21 (fricative); post-front-vowel → /j/ certh 40</li>
+        <li><strong>f</strong> intervocalic → /v/ certh 4; elsewhere → /f/ certh 3</li>
+        <li><strong>s</strong> intervocalic → /z/ certh 35; elsewhere → /s/ certh 34</li>
+        <li><strong>þ</strong> intervocalic → /ð/ certh 11 (voiced); elsewhere → /θ/ certh 10. <strong>ð</strong> always → certh 11</li>
+        <li><strong>hw</strong> → certh 5 · <strong>cw</strong> → certh 23 · <strong>sc</strong> → certh 15 · <strong>ng</strong> → certh 36 · <strong>nd</strong> → certh 33</li>
+        <li><strong>hl, hr, hn</strong> → h + consonant (OE voiceless sonorant clusters)</li>
+        <li><strong>æ</strong> → certh 48+46 (a+e digraph) · <strong>ea, eo</strong> → diphthong pairs</li>
+        <li>Mode: Angerthas Daeron baseline with Erebor reversions (C12=n, C29=r, C34=s, C54=h)</li>
       </ul>
     </div>
+
+    <details class="reference-panel" open>
+      <summary><h2>Complete Phoneme–Rune Reference</h2></summary>
+      <table class="ref-table">
+        <thead>
+          <tr>
+            <th>Certh</th>
+            <th>Rune</th>
+            <th>IPA</th>
+            <th>OE Grapheme</th>
+            <th>Example</th>
+          </tr>
+        </thead>
+        <tbody id="reference-body"></tbody>
+      </table>
+    </details>
   </div>
 
   <script type="module" src="main.js"></script>

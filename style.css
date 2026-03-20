@@ -318,3 +318,102 @@ input[type="checkbox"] {
   font-size: 0.78rem;
   color: #c9a84c;
 }
+
+/* Reference table */
+.reference-panel {
+  margin-top: 2rem;
+  border-top: 1px solid #2a2520;
+  padding-top: 1.2rem;
+}
+
+.reference-panel summary {
+  cursor: pointer;
+  list-style: none;
+}
+
+.reference-panel summary::-webkit-details-marker {
+  display: none;
+}
+
+.reference-panel summary h2 {
+  display: inline;
+}
+
+.reference-panel summary::before {
+  content: '▸ ';
+  color: #c9a84c;
+  font-size: 0.7rem;
+}
+
+.reference-panel[open] summary::before {
+  content: '▾ ';
+}
+
+.ref-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 0.8rem;
+  font-size: 0.82rem;
+}
+
+.ref-table thead th {
+  text-align: left;
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #5a5040;
+  padding: 0.4rem 0.6rem;
+  border-bottom: 1px solid #2a2520;
+  font-weight: 500;
+}
+
+.ref-table tbody td {
+  padding: 0.35rem 0.6rem;
+  border-bottom: 1px solid #1a1810;
+  color: #9a8b6e;
+}
+
+.ref-table tr:hover td {
+  background: #151820;
+}
+
+.ref-section td {
+  font-size: 0.72rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #c9a84c;
+  padding-top: 1rem !important;
+  padding-bottom: 0.3rem !important;
+  border-bottom: 1px solid #2a2520 !important;
+  background: none !important;
+}
+
+.ref-certh {
+  font-family: monospace;
+  color: #7a6f5a;
+  font-size: 0.78rem;
+}
+
+.ref-rune {
+  font-size: 1.4rem;
+  color: #e8dcc0;
+  line-height: 1;
+}
+
+.ref-ipa {
+  font-family: monospace;
+  color: #b0a080;
+  font-size: 0.82rem;
+}
+
+.ref-oe {
+  color: #d4c5a0;
+  font-family: 'Iowan Old Style', 'Palatino', 'Georgia', serif;
+}
+
+.ref-example {
+  color: #5a5040;
+  font-style: italic;
+  font-size: 0.78rem;
+}
